@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虎溪校区 - 重庆大学</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 顶部栏 */
+        .top-bar {
+            background-color: #9e1b20;
+            color: white;
+            height: 40px;
+            line-height: 40px;
+        }
+        
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .top-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+        
+        /* 头部 */
+        header {
+            background-color: white;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 400px;
+        }
+        
+        .logo img {
+            height: 60px;
+        }
+        
+        .nav-menu {
+            flex: 1;
+        }
+        
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-end;
+        }
+        
+        .nav-menu li {
+            margin-left: 30px;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .nav-menu a:hover {
+            color: #9e1b20;
+        }
+        
+        /* 轮播图 */
+        .banner {
+            position: relative;
+            height: 800px;
+            overflow: hidden;
+        }
+        
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* 主要内容 */
+        .main-content {
+            padding: 30px 0;
+            background-color: white;
+        }
+        
+        .content-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            border-left: 5px solid #9e1b20;
+            padding-left: 10px;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .news-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .news-item {
+            width: 32%;
+            margin-right: 2%;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .news-item:nth-child(3n) {
+            margin-right: 0;
+        }
+        
+        .news-item h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .news-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .news-item .date {
+            font-size: 12px;
+            color: #999;
+            margin-top: 10px;
+            text-align: right;
+        }
+        
+        /* 快速链接 */
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .quick-link {
+            width: 23%;
+            margin-right: 2%;
+            margin-bottom: 15px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        .quick-link:nth-child(4n) {
+            margin-right: 0;
+        }
+        
+        .quick-link i {
+            font-size: 24px;
+            color: #9e1b20;
+            margin-bottom: 10px;
+        }
+        
+        .quick-link a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+        }
+        
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .footer-section p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #555;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="welcome">欢迎访问重庆大学虎溪校区网站</div>
+            <div class="top-links">
+                <a href="#">学校主页</a>
+                <a href="#">English</a>
+                <a href="#">旧版入口</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://a1.boltp.com/2025/03/26/67e3994342ce6.png" alt="重庆大学虎溪校区">
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">校区概况</a></li>
+                        <li><a href="#">新闻中心</a></li>
+                        <li><a href="#">教育教学</a></li>
+                        <li><a href="#">学生工作</a></li>
+                        <li><a href="#">党建工作</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 轮播图 -->
+    <div class="banner">
+        <img src="https://so1.360tres.com/t01a0b4b64dab438cf9.jpg" alt="">
+    </div>
+    
+    <!-- 主要内容 -->
+    <div class="main-content">
+        <div class="container">
+            <!-- 通知公告 -->
+            <div class="content-section">
+                <h2 class="section-title">通知公告</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <h3>关于2025年清明节放假安排的通知</h3>
+                        <p>根据国家法定节假日规定，现将2025年清明节放假安排通知如下...</p>
+                        <div class="date">2025-03-20</div>
+                    </div>
+                    <div class="news-item">
+                        <h3>关于开展2025年第一季度校园安全隐患排查的通知</h3>
+                        <p>为切实做好校园安全工作，保障师生生命财产安全...</p>
+                        <div class="date">2025-03-15</div>
+                    </div>
+                    <div class="news-item">
+                        <h3>2025年度教职工体检工作安排</h3>
+                        <p>根据学校工作安排，现将2025年度教职工体检工作安排通知如下...</p>
+                        <div class="date">2025-03-10</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 校区新闻 -->
+            <div class="content-section">
+                <h2 class="section-title">校区新闻</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <h3>虎溪校区举办2025年春季校园文化节</h3>
+                        <p>3月25日，虎溪校区2025年春季校园文化节在虎溪校区中心广场拉开帷幕...</p>
+                        <div class="date">2025-03-25</div>
+                    </div>
+                    <div class="news-item">
+                        <h3>重庆大学虎溪校区成功举办首届人工智能创新大赛</h3>
+                        <p>由重庆大学虎溪校区主办的首届人工智能创新大赛于3月18日圆满结束...</p>
+                        <div class="date">2025-03-18</div>
+                    </div>
+                    <div class="news-item">
+                        <h3>国家重点实验室"未来智能技术"专题讲座在虎溪校区举行</h3>
+                        <p>3月12日，国家重点实验室"未来智能技术"专题讲座在虎溪校区学术报告厅成功举行...</p>
+                        <div class="date">2025-03-12</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 快速链接 -->
+            <div class="content-section">
+                <h2 class="section-title">快速链接</h2>
+                <div class="quick-links">
+                    <div class="quick-link">
+                        <i class="icon">📚</i>
+                        <a href="#">图书馆</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">🏛️</i>
+                        <a href="#">教务系统</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">🏠</i>
+                        <a href="#">校园门户</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">📝</i>
+                        <a href="#">招生就业</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">🔍</i>
+                        <a href="#">科研平台</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">🌐</i>
+                        <a href="#">网络服务</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">📅</i>
+                        <a href="#">会议预约</a>
+                    </div>
+                    <div class="quick-link">
+                        <i class="icon">🚌</i>
+                        <a href="#">交通出行</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>地址：重庆市沙坪坝区虎溪街道大学城南路55号</p>
+                    <p>电话：023-12345678</p>
+                    <p>邮箱：huxiinfo@cqu.edu.cn</p>
+                </div>
+                <div class="footer-section">
+                    <h3>相关链接</h3>
+                    <p><a href="#">重庆大学主页</a></p>
+                    <p><a href="#">人才招聘</a></p>
+                    <p><a href="#">校友会</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <p>微信公众号：重庆大学虎溪校区</p>
+                    <p>微博：@重庆大学虎溪校区</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 重庆大学虎溪校区 版权所有
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
