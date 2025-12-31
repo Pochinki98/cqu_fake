@@ -511,7 +511,7 @@ func DownloadProxies(proxy_ver string) {
 			"https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt",
 			"https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/socks5.txt",
 			"https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-socks5.txt",
-			"https://api.openproxylist.xyz/socks5.txt",
+			//"https://api.openproxylist.xyz/socks5.txt",
 			"https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5",
 			"https://openproxylist.xyz/socks5.txt",
 			"https://proxyspace.pro/socks5.txt",
