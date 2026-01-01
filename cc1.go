@@ -234,7 +234,7 @@ func GenReqHeader(method string) string {
 	if method == "get" || method == "head" {
 		connection := "Connection: Keep-Alive\r\n"
 		if cookies != "" {
-			connection += "Cookies: " + cookies + "\r\n"
+			connection += "Cookie: " + cookies + "\r\n"
 		}
 		accept := Choice(acceptall)
 		referer := "Referer: " + Choice(referers) + target + path + "\r\n"
@@ -258,7 +258,7 @@ func GenReqHeader(method string) string {
 		
 		length := "Content-Length: " + strconv.Itoa(len(payload)) + " \r\nConnection: Keep-Alive\r\n"
 		if cookies != "" {
-			length += "Cookies: " + cookies + "\r\n"
+			length += "Cookie: " + cookies + "\r\n"
 		}
 		// 使用处理后的 payload
 		header = post_host + accept + refer + content + user_agent + length + "\n" + payload + "\r\n\r\n"
